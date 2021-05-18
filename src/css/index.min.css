@@ -1,0 +1,90 @@
+/* ================================= Reset */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ================================= Reset End */
+.logo {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #FEFBF4;
+  padding: 10px 10px 0px 10px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 10px;
+  list-style: none;
+  font-size: 16px;
+  color: #E4C82B;
+  text-decoration: none;
+}
+
+.selected {
+  border-bottom: 2px solid #E4C82B;
+}
+
+.selected-button {
+  border-bottom: none;
+}
+
+.invert {
+  background-color: #E4C82B;
+  color: white;
+  border: 2px solid #E4C82B;
+}
+
+.nav-item :focus, .nav-item :hover, .nav-item :visited, .nav-item :link, .nav-item :active {
+  text-decoration: none;
+}
+
+.icon {
+  color: #E4C82B;
+}
+
+.user-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #E4C82B;
+  border-radius: 100px;
+  padding: 8px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.item {
+  font-family: inherit;
+}
+
+hr {
+  color: white;
+}
+
+.item {
+  padding: 20px;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=index.min.css.map */

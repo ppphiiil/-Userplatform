@@ -1,0 +1,10 @@
+
+
+$import-google-fonts: false;
+$font-family:'Montserrat', sans-serif;
+@import 'semantic-ui-sass';
+
+
+@import '_App.scss';
+@import './components/navigation/Navigation';
+
