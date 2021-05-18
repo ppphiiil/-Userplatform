@@ -12,8 +12,11 @@ export default function Navigation() {
     // ********************************
 
     <div className="nav">
-      <img className="logo" src={ logo } alt="logo" />
-
+      <NavLink
+        exact to="/"
+      >
+        <img className="logo" src={ logo } alt="logo" />
+      </NavLink>
       {/* //********************************
       //*** NAV BAR
       //******************************** */}

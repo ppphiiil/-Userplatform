@@ -1,0 +1,27 @@
+button{
+    padding: 13px 26px;
+   
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: inherit;
+
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: .38px;
+    color:white;
+    background-color: #e3c82b;
+    border-color: transparent;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+
+    
+    
+}
+
+Button:hover{
+        background-color: hsla(51, 77%, 53%, 0.788);
+    }

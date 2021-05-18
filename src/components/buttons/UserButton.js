@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function UserButton() {
 
-    const [open, setOpen] = useState( true );
+    const [open, setOpen] = useState( false );
     return (
         <div>
             <div className="ui inline dropdown  ">

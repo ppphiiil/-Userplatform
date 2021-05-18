@@ -1,5 +1,9 @@
 import React from 'react';
+
+
 import Navigation from './components/navigation/Navigation';
+
+
 
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
@@ -14,36 +18,43 @@ import RegisterPage from './components/pages/RegisterPage';
 import { Layout, Menu } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
+
+
 function App() {
   return (
     <div>
       <Layout>
         <HashRouter>
+
           <Navigation />
-          <Switch>
-            <Route path="#">
-              <Home />
-            </Route>
-            <Route path="/allusers">
-              <AllUsers />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
-            <Route path="/register">
-              <RegisterPage />
-            </Route>
+          <Content className="content">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/allusers">
+                <AllUsers />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/login">
+                <LoginPage />
+              </Route>
+              <Route path="/register">
+                <RegisterPage />
+              </Route>
 
 
-          </Switch>
+            </Switch>
+          </Content>
+
+
         </HashRouter>
-        <Footer />
+
       </Layout>
     </div>
   );
