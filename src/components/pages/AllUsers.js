@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function AllUsers () {
+export default function AllUsers() {
   return (
     <div>
-      UserPage
+      All Users
     </div>
   );
 }
