@@ -11,25 +11,45 @@ export default function LoginPage() {
   const [name, setName] = useState( '' );
   const [password, setPassword] = useState( '' );
   const [message, setMessage] = useState( '' );
-  const [user, setUser] = useState( [{
-    name: name,
-    password: password,
-  }] );
-  const { setIsLogin, userData } = useContext( MyContext )
+
+  const { setIsLogin, userData, currentUser, setCurrentUser, user, setUser } = useContext( MyContext )
 
   console.log( "in LoginPage", userData );
 
 
   const checkLogin = ( e ) => {
     e.preventDefault()
-    setUser( [{
-      name: name,
-      password: password,
-    }] );
-    console.log( "userData in chekLogin", userData );
+    console.log( "name, password", name, password );
+    setUser( ( oldUser ) => {
+      const newUser = {
+        ...user,
+        name: name,
+        password: password,
+      };
+      const updatedUser = { ...oldUser, ...newUser };
+      return [updatedUser]
+    } )
 
-    if ( user.name === userData.name && user.password === userData.password ) {
+
+
+    console.log( "USERDATA in chekLogin", userData );
+
+
+
+    let findUser = userData.filter( ( data ) => {
+      console.log( data )
+      return ( data.name === name && data.password === password )
+    } )
+
+
+    console.log( "FIND USER", findUser )
+    setMessage( "" )
+    if ( findUser.length == 1 ) {
+
       setIsLogin( true );
+      findUser = [];
+      // console.log( "XXX", userData.filter( ( user ) => userData.name === user.name ) );
+      // setCurrentUser( userData.filter( ( user ) => userData.name === user.name ) )
     } else {
       setMessage( "Username or Password is wrong, please try again" )
     }

@@ -65,6 +65,7 @@ export default function RegisterPage() {
           password: password,
           conditions: conditions.checked,
         };
+        console.log( "newUser", newUser );
         oldUserData.unshift( newUser );
         console.log( "USERDATA onSubmitHandler updatedUser", oldUserData );
         return oldUserData

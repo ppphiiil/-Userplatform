@@ -6,17 +6,18 @@ import ProfileCard from './ProfileCard'
 export default function ProfileContainer() {
 
     const { userData } = useContext( MyContext )
-    console.log( userData );
-    let profileCards = userData.map( ( user, index ) => {
-        console.log( "user", user );
+    // console.log( userData );
+    let profileCards = userData.map( ( data ) => {
+        // console.log( "user", user );
         const allCards = [];
-        const newCard = <ProfileCard profileInfos={ user } />;
+        // console.log( "DATA FÜR CARD", data );
+        const newCard = <ProfileCard profileInfos={ data } />;
         allCards.push( newCard );
 
         return ( allCards )
 
     } )
-    console.log( "profileCards", profileCards );
+    // console.log( "profileCards", profileCards );
 
     return (
         <div>

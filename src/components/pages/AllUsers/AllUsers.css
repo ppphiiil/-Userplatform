@@ -1,17 +1,19 @@
 .allUsers{
+  display:flex;
+  width:100%;
 flex-wrap: wrap;
     flex-direction: row;
 }
 
 
 .profileContainer{
-  min-width:500px;
+  width:60%;
    
 
 
 }
 
 .map{
-max-width:400px;
+width:40%;
 border:1px solid black
 }

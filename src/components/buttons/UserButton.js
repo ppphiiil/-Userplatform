@@ -5,7 +5,7 @@ import { MyContext } from '../../App';
 import ProfilePage from '../pages/ProfilePage';
 
 export default function UserButton() {
-    const { isLogin, setIsLogin, registered, userData } = useContext( MyContext );
+    const { isLogin, setIsLogin, registered, userData, setUser, initialUser } = useContext( MyContext );
 
     const [open, setOpen] = useState( false );
 
@@ -40,11 +40,15 @@ export default function UserButton() {
 
     const linkToLogout = (
         <NavLink style={ { textDecoration: 'none' } } to="/">
-            <div onClick={ () => setIsLogin( false ) } className="nav-item">Logout</div>
+            <div onClick={ () => logout() } className="nav-item">Logout</div>
         </NavLink>
     );
 
 
+    const logout = () => {
+        setIsLogin( false )
+        setUser( initialUser );
+    }
 
     return (
         <div>
