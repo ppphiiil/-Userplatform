@@ -7,7 +7,7 @@ export default function SubmitButton( props ) {
 
     return (
         <div>
-            <button> { props.text }</button>
+            <button className="submit-btn"> { props.text }</button>
         </div>
     )
 }

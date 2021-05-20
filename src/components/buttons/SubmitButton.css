@@ -1,4 +1,4 @@
-button{
+.submit-btn{
     padding: 13px 26px;
    
     font-size: 1.4rem;
@@ -17,11 +17,9 @@ button{
     border-radius: 0.5rem;
 
     cursor: pointer;
-
-    
-    
+ 
 }
 
-Button:hover{
+.submit-btn:hover{
         background-color: hsla(51, 77%, 53%, 0.788);
     }

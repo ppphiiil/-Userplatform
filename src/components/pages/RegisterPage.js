@@ -2,10 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import SubmitButton from '../buttons/SubmitButton.js';
 import { Checkbox, Form, Message } from 'semantic-ui-react';
 import { MyContext } from '../../App'
+import { useHistory } from 'react-router-dom';
 
+import { NavLink } from 'react-router-dom';
 
-
-
+/**
+ * This is the Page for the Registration. A new Member can make a new Account. If you click the submitbutton user-Object will be added to UserData-Array with Objects
+ * @returns 
+ */
 export default function RegisterPage() {
   console.log( "into RegisterPage" );
 
@@ -13,8 +17,8 @@ export default function RegisterPage() {
   const [email, setEmail] = useState( '' );
   const [password, setPassword] = useState( '' );
   const [conditions, setConditions] = useState( { checked: false } );
-
-  const { userData, setUserData, onRegister, setOnRegister, user, setUser } = useContext( MyContext )
+  const history = useHistory( "/" );
+  const { userData, setUserData, onRegister, user, setUser } = useContext( MyContext )
 
 
   console.log( "user in Registerpage", user );
@@ -28,14 +32,14 @@ export default function RegisterPage() {
     console.log( "after useEffects userData", userData );
   }, [] )
 
-
+  console.log( "history", history );
 
 
   const onSubmitHandler = () => {
     console.log( "into onSubmitHandler" );
     setUser( ( oldUser ) => {
       const newUser = {
-
+        ...user,
         name: name,
         email: email,
         password: password,
@@ -43,6 +47,8 @@ export default function RegisterPage() {
       };
       const updatedUser = { ...oldUser, ...newUser };
       console.log( "USER onSubmitHandler updatedUser", updatedUser );
+
+      history.push( "/login" );
       return updatedUser
     }
     );
@@ -53,13 +59,13 @@ export default function RegisterPage() {
       ( oldUserData ) => {
         console.log( "oldUserData", oldUserData );
         const newUser = {
-
+          ...user,
           name: name,
           email: email,
           password: password,
           conditions: conditions.checked,
         };
-        oldUserData.push( newUser );
+        oldUserData.unshift( newUser );
         console.log( "USERDATA onSubmitHandler updatedUser", oldUserData );
         return oldUserData
       }
@@ -69,13 +75,6 @@ export default function RegisterPage() {
     console.log( "after onSubmitHandler userData", userData );
 
   };
-
-
-  useEffect( () => {
-
-
-  }, [] )
-
 
 
 
@@ -141,6 +140,8 @@ export default function RegisterPage() {
           />
 
         </Form.Field>
+
+
 
         { onRegister ? <SubmitButton text={ 'Thank you for your Registration' } /> : <SubmitButton text={ 'Register now' } /> }
 

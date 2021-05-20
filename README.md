@@ -11,7 +11,7 @@ File: [go to file](https://drive.google.com/file/d/1oUeDr8qT09trLngmG4Tm22SF3eA2
 
 ## Userbutton
 Dropdown
-![structure](userbutton.png)
+![structure](UserButton.png)
 
 ## Login/Register
 ![structure](login.png)
@@ -22,4 +22,4 @@ Dropdown
 ![structure](profileedit.png)
 
 ## AllUsers Listing
-![structure](videographer.png)
+![structure](READMEimages/videographer.png)
