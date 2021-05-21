@@ -6,22 +6,22 @@ Demo: [go to website](https://ppphiiil.github.io/userplatform/#/)
 ### Sites and Components
 File: [go to file](https://drive.google.com/file/d/1oUeDr8qT09trLngmG4Tm22SF3eA2ashQ/view?usp=sharing)
 
-![structure](structure.png)
+![structure](READMEimages/structure.png)
 
 ## Homepage
-![structure](home.png)
+![structure](READMEimages/home.png)
 
 ## Userbutton
 Dropdown
-![structure](UserButton.png)
+![structure](READMEimages/UserButton.png)
 
 ## Login/Register
-![structure](login.png)
-![structure](register.png)
+![structure](READMEimages/login.png)
+![structure](READMEimages/register.png)
 
 ## Profile
-![structure](profilepage.png)
-![structure](profileedit.png)
+![structure](READMEimages/profilepage.png)
+![structure](READMEimages/profileedit.png)
 
 ## AllUsers Listing
 ![structure](READMEimages/videographer.png)
