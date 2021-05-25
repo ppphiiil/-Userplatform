@@ -1,10 +1,14 @@
 import React, { useState, useContext } from 'react'
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import { MyContext } from '../../../App'
+require( 'dotenv' ).config()
+
 
 export default function Map( props ) {
 
-    console.log( "enter Map" );
+
+
+    console.log( "enter Map", process.env.REACT_APP_API_KEY );
 
     const { userData } = useContext( MyContext )
 
@@ -81,7 +85,7 @@ export default function Map( props ) {
     return (
 
         <LoadScript
-            googleMapsApiKey='AIzaSyAAHyFaxRZmiS1TlLtkw5TtI8ywXpUYSL8'>
+            googleMapsApiKey={ process.env.REACT_APP_API_KEY }>
             <GoogleMap
                 mapContainerStyle={ mapStyles }
                 zoom={ 2 }
@@ -111,7 +115,7 @@ export default function Map( props ) {
                     )
                 }
             </GoogleMap>
-        </LoadScript>
+        </LoadScript >
 
     )
 }
