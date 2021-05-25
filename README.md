@@ -6,7 +6,7 @@ Demo: [go to website](https://ppphiiil.github.io/userplatform/#/)
 ### Sites and Components
 File: [go to file](https://drive.google.com/file/d/1oUeDr8qT09trLngmG4Tm22SF3eA2ashQ/view?usp=sharing)
 
-![structure](READMEimages/structure.png)
+![structure](READMEimages/plan.png)
 
 ## Homepage
 ![structure](READMEimages/home.png)
