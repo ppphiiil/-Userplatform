@@ -10,6 +10,7 @@ File: [go to file](https://drive.google.com/file/d/1oUeDr8qT09trLngmG4Tm22SF3eA2
 
 ## Homepage
 ![structure](READMEimages/home.png)
+![structure](READMEimages/homepage.png)
 
 ## Userbutton
 Dropdown
@@ -17,6 +18,7 @@ Dropdown
 
 ## Login/Register
 ![structure](READMEimages/login.png)
+![structure](READMEimages/login-real.png)
 ![structure](READMEimages/register.png)
 
 ## Profile

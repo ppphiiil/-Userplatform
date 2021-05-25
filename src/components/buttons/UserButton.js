@@ -42,14 +42,18 @@ export default function UserButton() {
     );
 
     const linkToLogout = (
-        <NavLink style={ { textDecoration: 'none' } } to="/">
-            <div onClick={ () => logout() } className="nav-item">Logout</div>
-        </NavLink>
+        <>
+            <hr />
+            <NavLink style={ { textDecoration: 'none' } } to="/">
+                <div onClick={ () => logout() } className="nav-item">Logout</div>
+            </NavLink>
+        </>
     );
 
 
     const logout = () => {
         setIsLogin( false )
+        console.log( "isLogin", isLogin );
         setCurrentUser( {
             "id": "",
             "name": "",
@@ -105,10 +109,10 @@ export default function UserButton() {
                     {/* //**DROPDOWN: LINK2 */ }
                     { isLogin ? '' : linkToRegisterPage }
 
-                    <hr />
+
 
                     {/* //**DROPDOWN: LINK3 */ }
-                    { linkToLogout }
+                    { isLogin ? linkToLogout : null }
 
                 </div>
             </div>

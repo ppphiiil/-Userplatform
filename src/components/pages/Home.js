@@ -27,13 +27,26 @@ export default function Home() {
         <div className="media-side">
 
 
-          <iframe src="https://player.vimeo.com/video/434666096?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" position="absolute" top="0" left="0" width="100%" height="100%" frameborder="0" allow="autoplay" allow="autoplay" allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/434666096?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" position="absolute" top="0" left="0" width="100%" height="100%" frameBorder="0" allow="autoplay" allow="autoplay" allowFullScreen></iframe>
         </div>
 
 
 
-      </div >
-      <section className="section section-yellow">
+      </div>
+
+      {/* {userData.map( ( user ) => {
+        return (
+          <div className="home profileCard">
+            <div className="home user-image-container">
+              <img className="user-image" src={ user.userimage } alt="img" />
+              <h2>{ user.name }</h2>
+            </div>
+          </div>
+
+        )
+      } ) } */}
+
+      < section className="section section-yellow">
         <div className="width-500">
           <h1><strong>Our</strong> content packages</h1>
           <p className="text">Choose a package and start immediately online with your first production OR arrange a first non-binding discussion with us.</p>
@@ -41,6 +54,7 @@ export default function Home() {
 
         </div>
       </section>
-    </div>
+
+    </div >
   );
 }
