@@ -1,15 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import logo from '../../images/logo/mycontentvideo-logo.png';
 
 import { NavLink } from 'react-router-dom';
 import UserButton from '../buttons/UserButton';
 
-import { MyContext } from '../../App'
+
 
 export default function Navigation() {
 
-  const { isLogin, registered, userData } = useContext( MyContext )
 
   return (
     // ********************************
@@ -36,13 +35,13 @@ export default function Navigation() {
         </NavLink>
 
 
-        { isLogin ? "You are loged in" : <NavLink
+        <NavLink
           style={ { textDecoration: 'none' } }
           activeClassName="selected"
           to="/about"
         >
           <li className="nav-item"> About Us</li>
-        </NavLink> }
+        </NavLink>
 
         {/* //********************************
         //*** USER NAV BUTTON

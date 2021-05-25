@@ -1,34 +1,33 @@
 import React, { useState, useContext } from 'react';
 import SubmitButton from '../buttons/SubmitButton.js';
-import { Checkbox, Form, Message } from 'semantic-ui-react';
+import { Form, Message } from 'semantic-ui-react';
 import { MyContext } from '../../App'
 
 
 
 
 export default function LoginPage() {
-  console.log( "into LoginPage" );
+  console.log( "enter LoginPage" );
   const [name, setName] = useState( '' );
   const [password, setPassword] = useState( '' );
   const [message, setMessage] = useState( '' );
+  const { setIsLogin, userData, setCurrentUser } = useContext( MyContext )
 
-  const { setIsLogin, userData, currentUser, setCurrentUser, user, setUser } = useContext( MyContext )
-
-  console.log( "in LoginPage", userData );
+  console.log( "userData in LoginPage", userData );
 
 
   const checkLogin = ( e ) => {
     e.preventDefault()
-    console.log( "name, password", name, password );
-    setUser( ( oldUser ) => {
-      const newUser = {
-        ...user,
-        name: name,
-        password: password,
-      };
-      const updatedUser = { ...oldUser, ...newUser };
-      return [updatedUser]
-    } )
+    console.log( "name & password: ", name, password );
+    // setUser( ( oldUser ) => {
+    //   const newUser = {
+    //     ...user,
+    //     name: name,
+    //     password: password,
+    //   };
+    //   const updatedUser = { ...oldUser, ...newUser };
+    //   return [updatedUser]
+    // } )
 
 
 
@@ -44,10 +43,10 @@ export default function LoginPage() {
 
     console.log( "FIND USER", findUser )
     setMessage( "" )
-    if ( findUser.length == 1 ) {
-
+    if ( findUser.length === 1 ) {
+      setCurrentUser( findUser[0] );
       setIsLogin( true );
-      findUser = [];
+
       // console.log( "XXX", userData.filter( ( user ) => userData.name === user.name ) );
       // setCurrentUser( userData.filter( ( user ) => userData.name === user.name ) )
     } else {

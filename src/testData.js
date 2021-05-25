@@ -1,8 +1,8 @@
-
+import { v4 as uuid } from 'uuid';
 
 let testData = [
     {
-        "id": 0,
+        "id": uuid(),
         "name": "test",
         "username": "123",
         "password": "test",
@@ -33,7 +33,7 @@ let testData = [
         }
     },
     {
-        "id": 1,
+       "id": uuid(),
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -65,7 +65,7 @@ let testData = [
         }
     },
     {
-        "id": 2,
+       "id": uuid(),
         "name": "Ervin Howell",
         "username": "Antonette",
         "password": "password",
@@ -96,7 +96,7 @@ let testData = [
         }
     },
     {
-        "id": 3,
+      "id": uuid(),
         "name": "Clementine Bauch",
         "username": "Samantha",
         "password": "password",
@@ -127,7 +127,7 @@ let testData = [
         }
     },
     {
-        "id": 4,
+        "id": uuid(),
         "name": "Patricia Lebsack",
         "username": "Karianne",
         "password": "password",
@@ -158,7 +158,7 @@ let testData = [
         }
     },
     {
-        "id": 5,
+       "id": uuid(),
         "name": "Chelsey Dietrich",
         "username": "Kamren",
         "password": "password",
@@ -191,7 +191,7 @@ let testData = [
         }
     },
     {
-        "id": 6,
+       "id": uuid(),
         "name": "Mrs. Dennis Schulist",
         "username": "Leopoldo_Corkery",
         "password": "password",
@@ -222,7 +222,7 @@ let testData = [
         }
     },
     {
-        "id": 7,
+       "id": uuid(),
         "name": "Kurtis Weissnat",
         "username": "Elwyn.Skiles",
         "password": "password",
@@ -253,7 +253,7 @@ let testData = [
         }
     },
     {
-        "id": 8,
+       "id": uuid(),
         "name": "Nicholas Runolfsdottir V",
         "username": "Maxime_Nienow",
         "password": "password",
@@ -284,7 +284,7 @@ let testData = [
         }
     },
     {
-        "id": 9,
+       "id": uuid(),
         "name": "Glenna Reichert",
         "username": "Delphine",
         "password": "password",
@@ -315,7 +315,7 @@ let testData = [
         }
     },
     {
-        "id": 10,
+       "id": uuid(),
         "name": "Clementina DuBuque",
         "username": "Moriah.Stanton",
         "password": "password",

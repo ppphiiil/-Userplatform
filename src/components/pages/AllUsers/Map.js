@@ -1,19 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { MyContext } from '../../../App'
 
 export default function Map( props ) {
 
-    console.log( "in Map" );
-    console.log( props.userLocations );
+    console.log( "enter Map" );
+
+    const { userData } = useContext( MyContext )
 
     const [selected, setSelected] = useState( {} );
-    const [psoition, setPosition] = useState( {
-        lat: 41,
-        lng: -71
+    // const [position, setPosition] = useState( {
+    //     lat: 41,
+    //     lng: -71
+    // } );
+
+    const locations = userData.map( ( item ) => {
+        return ( {
+            name: item.name,
+            location: {
+                lat: Number( item.address.geo.lat ),
+                lng: Number( item.address.geo.lng ),
+            }
+        }
+        )
     } );
 
     const mapStyles = {
-        height: "100vh",
+        height: "50vh",
+        width: "100%",
 
     };
 
@@ -21,7 +35,7 @@ export default function Map( props ) {
         lat: 29.4572, lng: -164.29
     }
 
-    const locations = props.userLocations;
+
 
 
     // 

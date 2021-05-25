@@ -7,10 +7,12 @@
     position: relative;
     font-family: inherit;
     height: auto;
-    background-color: #d5e3ec;
+    background-color:  black;
+    color: white;
+    padding:50px;
   }
   .footer .col {
-    width: 190px;
+    width: 300px;
     height: auto;
     float: left;
     box-sizing: border-box;
@@ -22,15 +24,15 @@
     margin: 0;
     padding: 0;
     font-family: inherit;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 17px;
-    padding: 20px 0px 5px 0px;
-    color: rgba(0, 0, 0, 0.979);
 
-    text-transform: uppercase;
-    letter-spacing: 0.250em;
-    text-decoration: bold;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 20px 0px 5px 0px;
+    color: #EED147;
+
+
+  
+   
   }
   .footer .col ul {
     list-style-type: none;
@@ -38,7 +40,7 @@
     padding: 0;
   }
   .footer .col ul li {
-    color: #000000;
+
     font-size: 14px;
     font-family: inherit;
    
@@ -53,7 +55,7 @@
     padding-right: 5px !important;
   }
   
-  .footer .col ul li:hover {
+  .footer .col ul li:hover :active :link{
     color: #5050505e;
     transition: .1s;
     -webkit-transition: .1s;
@@ -62,20 +64,10 @@
   .clearfix {
     clear: both;
   }
-  @media only screen and (min-width: 1280px) {
-    .contain {
-      width: 1200px;
-      margin: 0 auto;
-    }
-  }
+
   @media only screen and (max-width: 1139px) {
-    .contain .social {
-      width: 1000px;
-      display: block;
-    }
-    .social h1 {
-      margin: 0px;
-    }
+   
+    
   }
   @media only screen and (max-width: 950px) {
     .footer .col {

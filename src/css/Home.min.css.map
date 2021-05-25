@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,SAAS,EAAE,CAAC;EACZ,KAAK,EAAC,GAAG;EACT,OAAO,EAAC,IAAI;CACf;;AAED,AAAA,WAAW,CAAA;EACP,SAAS,EAAE,CAAC;EACR,KAAK,EAAC,GAAG;EACT,OAAO,EAAC,IAAI;CACnB",
+    "sources": [
+        "../components/pages/Home.scss"
+    ],
+    "names": [],
+    "file": "Home.min.css"
+}

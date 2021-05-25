@@ -1,0 +1,12 @@
+.text-side {
+  flex-grow: 1;
+  width: 50%;
+  padding: 30px;
+}
+
+.media-side {
+  flex-grow: 1;
+  width: 50%;
+  padding: 20px;
+}
+/*# sourceMappingURL=Home.min.css.map */

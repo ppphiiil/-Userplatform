@@ -1,11 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import './UserButton.scss'
 
 import { MyContext } from '../../App';
-import ProfilePage from '../pages/ProfilePage';
+
 
 export default function UserButton() {
-    const { isLogin, setIsLogin, registered, userData, setUser, initialUser } = useContext( MyContext );
+    const { isLogin, setIsLogin, currentUser, setCurrentUser } = useContext( MyContext );
 
     const [open, setOpen] = useState( false );
 
@@ -13,12 +14,14 @@ export default function UserButton() {
         <NavLink
             activeClassName="selected"
             style={ { textDecoration: 'none' } }
-            to="/profile"
+            to={ `/profile/${currentUser.id}` }
         >
             {' ' }
             <div onClick={ () => setOpen( !open ) } className="nav-item">Profile</div>
         </NavLink>
     );
+
+
 
     const linkToLoginPage = (
         <NavLink
@@ -47,7 +50,36 @@ export default function UserButton() {
 
     const logout = () => {
         setIsLogin( false )
-        setUser( initialUser );
+        setCurrentUser( {
+            "id": "",
+            "name": "",
+            "username": "",
+            "email": "",
+            "userimage": "",
+            "address": {
+                "street": "",
+                "suite": "",
+                "city": "leer",
+                "zipcode": "",
+                "geo": {
+                    "lat": "",
+                    "lng": ""
+                }
+            },
+            "phone": "",
+            "website": "",
+            "portfolio": {
+                "portfolioimage1": "",
+                "portfolioimage2": "",
+                "portfolioimage3": "",
+            },
+            "tags": [],
+            "company": {
+                "name": "",
+                "catchPhrase": "",
+                "bs": ""
+            }
+        } );
     }
 
     return (
@@ -56,7 +88,12 @@ export default function UserButton() {
 
                 <li onClick={ () => setOpen( !open ) } className=" nav-item user-btn">
                     <i className="bars icon padding" />
-                    <i className="large user circle icon" />
+                    {
+                        ( !isLogin )
+                            ? <i className="large user circle icon" />
+                            : ( currentUser.userimage )
+                                ? <img className="ub-userimage" src={ currentUser.userimage } alt="user-icon" />
+                                : <i className="large grey user circle icon" /> }
 
                 </li>
                 <div className={ `menu ${open ? 'visible transition' : ''}` }>

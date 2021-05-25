@@ -1,7 +1,7 @@
 {
   "name": "userplatform",
   "version": "0.1.0",
-  "homepage":".",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.1.1",
@@ -17,6 +17,7 @@
     "react-scripts": "4.0.3",
     "semantic-ui-react": "^2.0.3",
     "semantic-ui-sass": "^2.4.2",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -24,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

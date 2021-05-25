@@ -2,6 +2,7 @@
 .page{
 
     padding: 0 30px;
+    min-height:100vh;
 }
 
 .page + div {

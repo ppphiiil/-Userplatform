@@ -1,0 +1,25 @@
+.primary-small-btn{
+     padding: 2px 10px;
+   width:70px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: inherit;
+
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: .38px;
+    color:white;
+    background-color: #e4c82b;
+    border-color: transparent;
+    border-radius: 100px;
+
+    cursor: pointer;
+ 
+}
+
+.primary-small-btn:hover{
+        background-color: hsla(51, 77%, 53%, 0.788);
+}

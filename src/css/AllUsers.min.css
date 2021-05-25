@@ -1,0 +1,30 @@
+.allUsers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.profileContainer {
+  flex-grow: 1;
+}
+
+.map {
+  flex-grow: 1;
+  width: 40%;
+  min-width: 300px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 481px) {
+  .allUsers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .map {
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+/*# sourceMappingURL=AllUsers.min.css.map */

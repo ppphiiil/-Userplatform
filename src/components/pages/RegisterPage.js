@@ -1,65 +1,88 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import SubmitButton from '../buttons/SubmitButton.js';
-import { Checkbox, Form, Message } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import { MyContext } from '../../App'
 import { useHistory } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 
-import { NavLink } from 'react-router-dom';
 
 /**
  * This is the Page for the Registration. A new Member can make a new Account. If you click the submitbutton user-Object will be added to UserData-Array with Objects
  * @returns 
  */
 export default function RegisterPage() {
-  console.log( "into RegisterPage" );
+  console.log( "enter RegisterPage" );
 
   const [name, setName] = useState( '' );
   const [email, setEmail] = useState( '' );
   const [password, setPassword] = useState( '' );
   const [conditions, setConditions] = useState( { checked: false } );
   const history = useHistory( "/" );
-  const { userData, setUserData, onRegister, user, setUser } = useContext( MyContext )
+  const { userData, setUserData, onRegister } = useContext( MyContext )
 
 
-  console.log( "user in Registerpage", user );
+  const initialUser = {
+    "id": "",
+    "name": "",
+    "username": "",
+    "email": "",
+    "userimage": "",
+    "address": {
+      "street": "",
+      "suite": "",
+      "city": "leer",
+      "zipcode": "",
+      "geo": {
+        "lat": "",
+        "lng": ""
+      }
+    },
+    "phone": "",
+    "website": "",
+    "portfolio": {
+      "portfolioimage1": "",
+      "portfolioimage2": "",
+      "portfolioimage3": "",
+    },
+    "tags": [],
+    "company": {
+      "name": "",
+      "catchPhrase": "",
+      "bs": ""
+    }
+  }
+
   console.log( "userData in Registerpage", userData );
-
-
-  useEffect( () => {
-    console.log( "into useEffects" );
-
-
-    console.log( "after useEffects userData", userData );
-  }, [] )
-
   console.log( "history", history );
 
 
   const onSubmitHandler = () => {
-    console.log( "into onSubmitHandler" );
-    setUser( ( oldUser ) => {
-      const newUser = {
-        ...user,
-        name: name,
-        email: email,
-        password: password,
-        conditions: conditions.checked,
-      };
-      const updatedUser = { ...oldUser, ...newUser };
-      console.log( "USER onSubmitHandler updatedUser", updatedUser );
-
-      history.push( "/login" );
-      return updatedUser
-    }
-    );
-    console.log( "after onSubmitHandler user", user );
+    console.log( "enter onSubmitHandler" );
+    //     setUser( ( oldUser ) => {
+    //       const newUser = {
+    //         ...user,
+    //         id: uuid(),
+    //         name: name,
+    //         email: email,
+    //         password: password,
+    //         conditions: conditions.checked,
+    //       };
+    //       const updatedUser = { ...oldUser, ...newUser };
+    //       console.log( "USER onSubmitHandler updatedUser", updatedUser );
+    // 
+    //      
+    //       return updatedUser
+    //     }
+    //     );
+    //     console.log( "after onSubmitHandler user", user );
 
 
     setUserData(
       ( oldUserData ) => {
         console.log( "oldUserData", oldUserData );
         const newUser = {
-          ...user,
+          ...initialUser,
+          id: uuid(),
           name: name,
           email: email,
           password: password,
@@ -68,11 +91,12 @@ export default function RegisterPage() {
         console.log( "newUser", newUser );
         oldUserData.unshift( newUser );
         console.log( "USERDATA onSubmitHandler updatedUser", oldUserData );
+
         return oldUserData
       }
 
     )
-
+    history.push( "/login" );
     console.log( "after onSubmitHandler userData", userData );
 
   };
@@ -80,14 +104,14 @@ export default function RegisterPage() {
 
 
 
-  const errorHandling = ( errorcode ) => {
-    return (
-      errorcode == "" ? {
-        content: 'Enter something',
-        pointing: 'above',
-      } : false
-    )
-  }
+  // const errorHandling = ( errorcode ) => {
+  //   return (
+  //     errorcode == "" ? {
+  //       content: 'Enter something',
+  //       pointing: 'above',
+  //     } : false
+  //   )
+  // }
 
 
 
@@ -134,7 +158,7 @@ export default function RegisterPage() {
             label='I agree to the Terms and Conditions'
             onChange={ () => setConditions( { checked: !conditions.checked } ) }
             checked={ conditions.checked }
-            error={ conditions.checked == "false" ? {
+            error={ conditions.checked === "false" ? {
               content: 'You have to agree our Terms and Conditions',
               pointing: 'above',
             } : false }

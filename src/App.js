@@ -1,9 +1,9 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route, useHistory } from 'react-router-dom';
+
+//Data for testing
 import testData from './testData.js'
-
-
 
 //PAGES
 import Navigation from './components/navigation/Navigation';
@@ -14,65 +14,43 @@ import Contact from './components/pages/Contact';
 import './index.scss';
 import LoginPage from './components/pages/LoginPage';
 import RegisterPage from './components/pages/RegisterPage';
-import ProfilePage from './components/pages/ProfilePage';
+import ProfilePage from './components/pages/ProfilePage/ProfilePage';
 import RegisterSuccessful from './components/pages/RegisterSuccessful';
 import Page from '../src/components/layout/Page';
+import Footer from './components/Footer.js';
 
 //LAYOUT ANDT
-import { Layout, Menu } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+
 
 //CONTEXT
 export const MyContext = createContext( null );
 
-//TESTDATA
 
 
-const initialUser = {
-  "id": "",
-  "name": "",
-  "username": "",
-  "email": "",
-  "userimage": "",
-  "address": {
-    "street": "",
-    "suite": "",
-    "city": "leer",
-    "zipcode": "",
-    "geo": {
-      "lat": "",
-      "lng": ""
-    }
-  },
-  "phone": "",
-  "website": "",
-  "portfolio": {
-    "portfolioimage1": "",
-    "portfolioimage2": "",
-    "portfolioimage3": "",
-  },
-  "tags": [],
-  "company": {
-    "name": "",
-    "catchPhrase": "",
-    "bs": ""
-  }
-}
+
 
 function App() {
-  console.log( testData );
-  console.log( 'into App' );
+  console.log( testData ? "TestData loaded" : "noTestData" );
+  console.log( 'enter App' );
   const [isLogin, setIsLogin] = useState( false );
+  //???
   const [registered, setRegistered] = useState( false );
-  const [userData, setUserData] = useState( testData );
   const [onRegister, setOnRegister] = useState( false );
-  const [user, setUser] = useState( initialUser );
+  //All the Users in an Array
+  const [userData, setUserData] = useState( testData );
+  //For Profile Editing
+  const [editState, setEditState] = useState( false );
+
+  // const [user, setUser] = useState( initialUser );
+
+  // after login this are the current user datas
   const [currentUser, setCurrentUser] = useState( {} );
 
+  let history = useHistory();
+
   console.log( 'userData in App', userData );
-  console.log( "setcurrent user is:", currentUser );
-
-
+  console.log( "currentUser in App:", currentUser );
+  console.log( "history", history );
 
 
   return (
@@ -87,15 +65,17 @@ function App() {
           setRegistered,
           onRegister,
           setOnRegister,
-          user,
-          setUser,
           currentUser, setCurrentUser,
-          initialUser
+          editState, setEditState,
+          history
 
         } }
       >
+
         {/* <Layout className="layout"> */ }
-        <HashRouter>
+        <HashRouter >
+
+
           <Navigation />
           {/* <Content className="content"> */ }
           <Switch>
@@ -124,7 +104,13 @@ function App() {
               </Page>
             </Route>
 
-            <Route path="/profile">
+            <Route path="/profile/:pathId">
+              <Page>
+                <ProfilePage />
+              </Page>
+            </Route>
+
+            <Route path="/myprofile">
               <Page>
                 <ProfilePage />
               </Page>
@@ -149,6 +135,7 @@ function App() {
             </Route>
 
           </Switch>
+          <Footer />
 
         </HashRouter>
         {/* </Layout> */ }

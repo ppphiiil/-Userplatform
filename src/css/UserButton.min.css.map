@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,OAAO,EAAC,MAAM;EACb,aAAa,EAAE,IAAI;EACpB,MAAM,EAAC,IAAI;EACX,WAAW,EAAC,KAAK;CACpB",
+    "sources": [
+        "../components/buttons/UserButton.scss"
+    ],
+    "names": [],
+    "file": "UserButton.min.css"
+}

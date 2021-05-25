@@ -1,7 +1,13 @@
 import React from 'react'
-import './ProfileCard.css'
+import './ProfileCard.scss'
+import { NavLink } from 'react-router-dom'
+import ButtonPrimarySmall from '../../buttons/ButtonPrimarySmall';
+
+
 
 export default function ProfileCard( { profileInfos } ) {
+    console.log( "enter ProfileCard" );
+
     return (
         <>
             <div className="profileCard">
@@ -15,14 +21,16 @@ export default function ProfileCard( { profileInfos } ) {
                         <p>{ profileInfos.address.city }</p>
                         <div >{ profileInfos.tags.map( ( tag ) => <span className="tags">{ `${tag} ` }</span> ) }</div>
                     </div>
-                    <button >Profile</button>
+                    <NavLink to={ `/profile/${profileInfos.id}` }  ><ButtonPrimarySmall text="Profile" /></NavLink>
                 </div>
                 <div className="portfolio">
                     { profileInfos.portfolio.portfolioimage1 ? <img className="portfolio-img" src={ profileInfos.portfolio.portfolioimage1 } alt="img" /> : <div className=" placeholder-img" >no image</div> }
                     { profileInfos.portfolio.portfolioimage2 ? <img className="portfolio-img" src={ profileInfos.portfolio.portfolioimage2 } alt="img" /> : <div className=" placeholder-img" >no image</div> }{ profileInfos.portfolio.portfolioimage3 ? <img className="portfolio-img" src={ profileInfos.portfolio.portfolioimage3 } alt="img" /> : <div className=" placeholder-img" >no image</div> }
                 </div>
+
+
             </div>
-            <hr></hr>
+            <hr />
         </>
     )
 }

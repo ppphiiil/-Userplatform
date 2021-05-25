@@ -1,11 +1,14 @@
-
+$color-primary: #e4c82b;
 
 $import-google-fonts: false;
 $font-family:'Montserrat', sans-serif;
-@import 'semantic-ui-sass';
+ @import 'semantic-ui-sass';
 
 
 @import '_App.scss';
 @import './components/navigation/Navigation';
 
-@import './components/layout/layout.scss'
+@import './components/layout/layout.scss';
+
+@import './components/_Footer.scss';
+@import './components/buttons/_ButtonPrimary.scss';
