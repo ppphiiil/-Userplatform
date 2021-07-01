@@ -6,25 +6,34 @@ Demo: [go to website](https://ppphiiil.github.io/userplatform/#/)
 
 
 ## Homepage
+---
 ![structure](READMEimages/home.png)
 ![structure](READMEimages/homepage.png)
 
 ## Userbutton
+---
 Dropdown
 ![structure](READMEimages/UserButton.png)
 ![structure](READMEimages/userbutton-real.png)
 
 ## Login/Register
+---
 ![structure](READMEimages/login.png)
 ![structure](READMEimages/login-real.png)
 ![structure](READMEimages/register.png)
 
+
 ## Profile
+---
 ![structure](READMEimages/profilepage.png)
+![structure](READMEimages/profile.png)
 ![structure](READMEimages/profileedit.png)
+![structure](READMEimages/edit.png)
 
 ## AllUsers Listing
+---
 ![structure](READMEimages/videographer.png)
+![structure](READMEimages/profiles.png)
 
 
 ### Sites and Components
