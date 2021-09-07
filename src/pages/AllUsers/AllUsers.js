@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import ProfileContainer from './ProfileContainer'
 import './AllUsers.scss'
+import { MyContext } from '../../App'
 
 export default function AllUsers () {
-  console.log('in AllUsers ')
+  const { userData } = useContext(MyContext)
 
   // {
   //   name: "Location 1",
@@ -16,7 +17,7 @@ export default function AllUsers () {
   return (
     <div className=' allUsers'>
       <div className='profileContainer'>
-        <ProfileContainer />
+        <ProfileContainer userData={userData}/>
       </div>
       {/* <div className="map"><Map /></div> */}
     </div>

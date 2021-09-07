@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../App'
 import ButtonPrimary from '../components/buttons/ButtonPrimary'
+import ProfileContainerPreview from "./AllUsers/ProfileContainerPreview"
 import './Home.scss'
 
 export default function Home () {
   const { userData } = useContext(MyContext)
 
   return (
-    <div>
+    <div className='home'>
       <div className='section container'>
         <div className='text-side'>
           <h1>
@@ -36,9 +37,11 @@ export default function Home () {
               <span className='text'>Low cost</span>
             </li>
           </ul>
+          <div className="product-list">
           <h5>SimpleClips</h5>
           <h5>Interview-Videos</h5>
           <h5>Produkt-Videos</h5>
+          </div>
         </div>
 
         <div className='media-side'>
@@ -56,18 +59,14 @@ export default function Home () {
           ></iframe>
         </div>
       </div>
+<div className="section">
+     <h2>We found { userData.length } Videographer</h2>
+          
+           <ProfileContainerPreview userData={userData.filter((user,index)=>{
+             return(index < 4)
 
-      {/* {userData.map( ( user ) => {
-        return (
-          <div className="home profileCard">
-            <div className="home user-image-container">
-              <img className="user-image" src={ user.userimage } alt="img" />
-              <h2>{ user.name }</h2>
-            </div>
-          </div>
-
-        )
-      } ) } */}
+           })}/>
+           </div>
 
       <section className='section section-yellow'>
         <div className='width-500'>

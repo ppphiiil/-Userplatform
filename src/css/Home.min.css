@@ -1,12 +1,57 @@
-.text-side {
-  flex-grow: 1;
+.home .text-side {
+  min-width: 300px;
   width: 50%;
-  padding: 30px;
 }
 
-.media-side {
+.home .media-side {
   flex-grow: 1;
   width: 50%;
-  padding: 20px;
+  min-width: 300px;
+}
+
+@media only screen and (max-width: 800px) {
+  .home .text-side {
+    width: 100%;
+    padding: 10px;
+  }
+  .home .media-side {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.home .section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.home .section-yellow {
+  background-color: #FEFAF3;
+  text-align: center;
+}
+
+.home .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.home h5 {
+  padding: 5px 20px;
+  line-height: 1.5;
+  margin: 0px;
+}
+
+.home .width-500 {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.home .user-image {
+  border-radius: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=Home.min.css.map */

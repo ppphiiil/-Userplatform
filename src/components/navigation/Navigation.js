@@ -29,7 +29,7 @@ export default function Navigation() {
         <NavLink
           style={ { textDecoration: 'none' } }
           activeClassName="selected"
-          to="/allusers"
+          to="/login"
         >
           <li className="nav-item">Videographer </li>
         </NavLink>

@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import SubmitButton from '../components/buttons/SubmitButton.js';
 import { Form, Message } from 'semantic-ui-react';
 import { MyContext } from '../App'
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -14,6 +14,16 @@ export default function LoginPage() {
   const { setIsLogin, userData, setCurrentUser } = useContext( MyContext )
 
   console.log( "userData in LoginPage", userData );
+
+
+useEffect(() => {
+window.scroll({
+  top: 0, 
+  left: 0, 
+  //behavior: 'smooth'
+});
+  
+}, [])
 
 
   const checkLogin = ( e ) => {
@@ -89,6 +99,9 @@ export default function LoginPage() {
           header='Error'
           content={ message }
         /> : "" }
+
+        <p>You don´t have a profile yet?</p>
+        <NavLink to="/register">Register</NavLink>
 
 
       </Form>

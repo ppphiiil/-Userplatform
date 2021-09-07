@@ -8,92 +8,77 @@
   padding: 0;
 }
 
-
-
-:root {
-  // font-size: 62.5%;
-
-  
-}
-
 /* ================================= Reset End */
-
-// @font-face {
-//   font-family: "Open Sans";
-//   src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap') ;
-// }
 
 
 //STYLING
 
-h1{
-font-family: inherit;
-    font-style: normal;
-    font-size: 46px;
-    letter-spacing: .4px;
-    text-transform: none;
-    line-height: 1.2em;
-    color: #302551;
+h1 {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 46px;
+  letter-spacing: .4px;
+  text-transform: none;
+  line-height: 1.2em;
+  color: #302551;
 }
 
-strong{
-  color:#e4c82b;
+@media only screen and (max-width: 680px) {
+  h1 {
+  font-size: 30px;
+}
+
+}
+
+strong {
+  color: #e4c82b;
   font-weight: bold;
 }
 
-.text{
-   
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    letter-spacing: .5px;
-    line-height: 1.7em;
-    color: rgba(12,8,37,.55);
-    margin: 0em 0em 1em;
+.text {
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .5px;
+  line-height: 1.7em;
+  color: rgba(12, 8, 37, .55);
+  margin: 0em 0em 1em;
 }
 
 
-
-
-
-.color-secondary{
-    color: #302551;
+.color-secondary {
+  color: #302551;
 }
 
-.listing{
-  margin-left:30px;
-  margin-bottom:30px;
+.listing {
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
-.list-item{
-    list-style-type: none;
-    font-size: 25px;
+.list-item {
+  list-style-type: none;
+  font-size: 25px;
 }
 
 
-h5{
+h5 {
   background: #302551;
-    display: inline;
-    color: #fff;
+  display: inline;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .03em;
+  line-height: 4;
+  font-style: normal;
+  font-size: 15px;
 
-    font-weight: 700;
-    letter-spacing: .03em;
-    line-height: 4;
-    font-style: normal;
-    font-size: 15px;
-
-    border-width: 10px;
-    border-style: solid;
-
-    white-space: nowrap;
-
-    padding: 10px 20px;
+  border-style: solid;
+  white-space: nowrap;
+  padding: 10px 20px;
 }
 
 
 
-form{
-  
-  width:400px;
-  
+form {
+  width: 400px;
 }

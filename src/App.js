@@ -19,8 +19,6 @@ import RegisterSuccessful from './pages/RegisterSuccessful';
 import Page from '../src/components/layout/Page';
 import Footer from './components/Footer.js';
 
-//LAYOUT ANDT
-
 
 //CONTEXT
 export const MyContext = createContext( null );
@@ -33,15 +31,13 @@ function App() {
   console.log( testData ? "TestData loaded" : "noTestData" );
   console.log( 'enter App' );
   const [isLogin, setIsLogin] = useState( false );
-  //???
+
   const [registered, setRegistered] = useState( false );
   const [onRegister, setOnRegister] = useState( false );
   //All the Users in an Array
   const [userData, setUserData] = useState( testData );
   //For Profile Editing
   const [editState, setEditState] = useState( false );
-
-  // const [user, setUser] = useState( initialUser );
 
   // after login this are the current user datas
   const [currentUser, setCurrentUser] = useState( {} );

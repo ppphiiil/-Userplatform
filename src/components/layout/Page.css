@@ -1,4 +1,12 @@
 .page {
-    padding: 0 30px;
+    padding: 0 50px;
     min-height: 100vh;
+}
+
+@media only screen and (max-width: 450px) {
+.page {
+    padding: 0 30px;
+   
+}
+
 }

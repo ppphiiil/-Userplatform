@@ -13,14 +13,13 @@ export default function Footer () {
             <p>Contact for new Customers:</p>
             <p>Philipp Meinwelt</p>
             <p>+49 1578 201 8080</p>
-            <p>info@mycontentvideo.de</p>
 
           </ul>
         </div>
         <div className="col">
           <h1>Quick Links</h1>
           <ul>
-            <li>For Videographers</li>
+            <li><Link to="/register">Register as a Videographer</Link></li>
             <li><Link to="/about">About</Link></li>
             <li>Jobs</li>
             <li>Kontakt</li>

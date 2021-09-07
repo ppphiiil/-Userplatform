@@ -1,11 +1,9 @@
-import React, { useContext } from 'react'
-import { MyContext } from '../../App'
+import React from 'react'
 import ProfileCard from './ProfileCard'
 
 
-export default function ProfileContainer() {
+export default function ProfileContainer({userData}) {
 
-    const { userData } = useContext( MyContext )
     let profileCards = userData.map( ( data ) => {
         const allCards = [];
         const newCard = <ProfileCard profileInfos={ data } />;

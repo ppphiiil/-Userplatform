@@ -1,52 +1,65 @@
 /* ================================= Reset End */
 
 /* STYLES SPECIFIC TO FOOTER  */
+
 .footer {
   width: 100%;
   position: relative;
   font-family: inherit;
   height: auto;
   background-color: black;
-  color: white;
+  color: rgba(255, 255, 255, 0.575);
   padding: 50px;
-}
 
-.footer .col {
-  width: 300px;
-  height: auto;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: 0px 20px 20px 20px;
-}
 
-.footer .col h1 {
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
+  .col {
+    width: 300px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+  }
 
-  font-size: 16px;
-  line-height: 30px;
-  padding: 20px 0px 5px 0px;
-  color: #eed147;
-}
+  .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
 
-.footer .col ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+    font-size: 16px;
+    line-height: 30px;
+    padding: 20px 0px 5px 0px;
+    color: #eed147;
+  }
 
-.footer .col ul li {
-  font-size: 14px;
-  font-family: inherit;
+  .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-  padding: 5px 0px 5px 0px;
-  cursor: pointer;
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
+  .col ul li {
+    font-size: 14px;
+    font-family: inherit;
+
+
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+  }
+
+  a:link,
+  a:visited {
+    color:rgba(255, 255, 255, 0.685);
+  }
+
+  a:hover {
+    color: white;
+  }
+
 }
 
 .social ul li {
