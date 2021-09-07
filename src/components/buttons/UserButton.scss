@@ -1,6 +1,44 @@
-.ub-userimage{
-    display:inline;
-     border-radius: 100%;
-    height:24px;
-    margin-left:3.5px;
+.ub-userimage {
+    display: inline;
+    border-radius: 100%;
+    height: 24px;
+    margin-left: 3.5px;
+}
+
+.user-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #302551;
+    border-radius: 100px;
+    padding: 8px;
+    width: 80px;
+    cursor: pointer;
+}
+
+i {
+    color: #302551;
+}
+
+.item {
+    font-family: inherit;
+}
+
+hr {
+    color: white;
+}
+
+.ui.inline.dropdown .menu {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.ui.inline.dropdown {
+    padding-right: 50px;
+    padding-left: 30px;
+}
+
+.ui.dropdown .menu > .item {
+    font-size: 1.6rem;
 }

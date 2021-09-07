@@ -1,12 +1,4 @@
-
-.page{
-
+.page {
     padding: 0 30px;
-    min-height:100vh;
-}
-
-.page + div {
-  /* //!??????? how is it working */
-
-
+    min-height: 100vh;
 }

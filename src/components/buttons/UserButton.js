@@ -51,10 +51,7 @@ export default function UserButton() {
     );
 
 
-    const logout = () => {
-        setIsLogin( false )
-        console.log( "isLogin", isLogin );
-        setCurrentUser( {
+    const userSchema = {
             "id": "",
             "name": "",
             "username": "",
@@ -83,23 +80,32 @@ export default function UserButton() {
                 "catchPhrase": "",
                 "bs": ""
             }
-        } );
+        } ;
+
+    const logout = () => {
+        setIsLogin( false )
+        console.log( "isLogin", isLogin );
+        setCurrentUser( userSchema);
     }
 
     return (
         <div>
             <div className="ui inline dropdown  ">
 
+                {/* Avatar Icon */}
                 <li onClick={ () => setOpen( !open ) } className=" nav-item user-btn">
-                    <i className="bars icon padding" />
+                    <i className="bars icon" />
                     {
+                        // if not loggedIn than show Icon, if loggedIn show avatar
                         ( !isLogin )
-                            ? <i className="large user circle icon" />
+                            ? <i className="large user circle icon ub-icon" />
                             : ( currentUser.userimage )
                                 ? <img className="ub-userimage" src={ currentUser.userimage } alt="user-icon" />
                                 : <i className="large grey user circle icon" /> }
 
                 </li>
+
+                {/* DROPDOWN */}
                 <div className={ `menu ${open ? 'visible transition' : ''}` }>
 
                     {/* //**DROPDOWN: LINK1 */ }

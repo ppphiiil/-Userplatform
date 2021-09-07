@@ -7,15 +7,15 @@ import testData from './testData.js'
 
 //PAGES
 import Navigation from './components/navigation/Navigation';
-import Home from './components/pages/Home';
-import AllUsers from './components/pages/AllUsers/AllUsers';
-import About from './components/pages/About';
-import Contact from './components/pages/Contact';
+import Home from './pages/Home';
+import AllUsers from './pages/AllUsers/AllUsers';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import './index.scss';
-import LoginPage from './components/pages/LoginPage';
-import RegisterPage from './components/pages/RegisterPage';
-import ProfilePage from './components/pages/ProfilePage/ProfilePage';
-import RegisterSuccessful from './components/pages/RegisterSuccessful';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import RegisterSuccessful from './pages/RegisterSuccessful';
 import Page from '../src/components/layout/Page';
 import Footer from './components/Footer.js';
 
